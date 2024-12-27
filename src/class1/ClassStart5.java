@@ -8,7 +8,7 @@ package class1;
 * 클래스 타입의 배열을 활용하여 값을 가져오면 좀 더 코드가 간결해진다.
 * */
 
-public class ClassStart4 {
+public class ClassStart5 {
     public static void main(String[] args) {
         Student student1 = new Student();
         student1.name = "학생1";
@@ -20,12 +20,14 @@ public class ClassStart4 {
         student2.age = 17;
         student2.grade = 70;
 
-        Student[] students = new Student[2];
-        students[0] = student1;
-        students[1] = student2;
+        Student[] students = {student1, student2};
 
         for (int i = 0; i < students.length; i++) {
             System.out.printf("이름 = %s 나이 = %d 점수 = %d \n", students[i].name, students[i].age, students[i].grade);
+        }
+
+        for (Student s : students) {
+            System.out.printf("이름 = %s 나이 = %d 점수 = %d \n", s.name, s.age, s.grade);
         }
     }
 }
