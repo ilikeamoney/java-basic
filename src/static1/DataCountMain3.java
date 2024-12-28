@@ -29,6 +29,7 @@ public class DataCountMain3 {
         Data3 d = new Data3("D");
         System.out.println(d.count);
 
+
         // 클래스를 통한 접근
         System.out.println(Data3.count);
     }
